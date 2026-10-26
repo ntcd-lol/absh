@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "absh"
+version = "0.1.0"
+description = "Absolute Shell — a friendly, colourful interactive shell for Termux."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = [
+    "prompt_toolkit>=3.0",
+]
+
+[project.scripts]
+absh = "absh.shell:main"
+
+[tool.setuptools.packages.find]
+include = ["absh*"]
